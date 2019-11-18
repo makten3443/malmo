@@ -1,0 +1,32 @@
+$colors:(
+   color1: rgb(46, 64, 78),
+
+);
+@function color($color-name){
+    @return map-get($colors, $color-name )
+}
+
+.cardWraper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    .card{
+        width: 18rem;
+    height: auto;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    background-color:#102B3F; 
+    box-shadow: .5rem .5rem 3rem rgba(110, 91, 91, 0.404);
+    border-radius: 2rem;
+    }
+    .cardImg{
+        width: 100%;
+    object-fit: cover;
+    }
+}
+
