@@ -22,7 +22,7 @@ const navSlide = () => {
                 link.style.animation = '';
                 // men om den inte hittar ett värde så kommer den att spela upp animationen. 
             } else {
-                link.style.animation = `navLinkFade 1s ease forwards ${index / 10}s`;
+                link.style.animation = `navLinkFade 1s ease forwards ${index / 12}s`;
             }
         });
         // burger menus toggle funktion

@@ -7,37 +7,35 @@
     position: relative;
     right: -100px;
     padding: 8px;
-}
-    
-.nav-link li{
-    list-style: none;
-}  
-        .nav-link li :hover{
-            text-decoration: line-through;
-            text-decoration-color: rgba(253, 253, 13, 0.815);
-        }
 
-        
-    .nav-link a{
-        color: rgba(253, 253, 13, 0.815);
+    li{
+        list-style: none;
+    
+        &:hover{
+            text-decoration: line-through;
+            text-decoration-color: $primaryColor;
+        }
+    a{
+        color: $primaryColor;
         text-decoration:none;
         font-size: 20px;
         padding: 6px;
         }
-
-#nav-kund{
-    position: relative;
-    top: -3px;
-    background-color: rgb(102, 100, 86);
-    border-radius: 2px;
-    border: 1px solid;
-    padding: 8px;
-    cursor: pointer;
+    }  
+    #nav-kund{
+        position: relative;
+        top: -3px;
+        background-color: $kundvagnColor;
+        border-radius: 2px;
+        border: 1px solid;
+        padding: 8px;
+        cursor: pointer;
+    }
 }
 
 
 .logo {
-    color: rgba(253, 253, 13, 0.815);
+    color: $primaryColor;
     text-decoration: line-through;
     text-transform: uppercase;
     font-size: 30px;
