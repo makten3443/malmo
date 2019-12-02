@@ -16,12 +16,12 @@
     .modal {
         position: absolute;
         top: 0px;
-        background-color: whitesmoke;
+        background-color: $white;
         width: 500px;
         height: 300px;
-        border: 0.5px solid black;
+        border: 0.5px solid $black;
         border-radius: 2px;
-    }
+
         .modal___exit {
             position: fixed;
             right: 0;
@@ -32,34 +32,34 @@
         }
 
         .modal___text{
-            position: relative;
             display: flex;
             justify-content: space-around;
-            top: 1.4rem;
+            padding: 0 0 10px 10px;
             font-size: 12px;
-        }
+          }
 
         .modal___split {
             position: relative;
             left: 5%;
-            top: 9%;
+            top: 10%;
             width: 90%;
             z-index: 2;
-            color: grey;
+            color: $grey;
             border: 0.5px solid;
         }
 
         .modal___kop {
             position: absolute;
-            right: 8px;
+            right: 3rem;
             top: 250px;
             width: 60px;
             height: 30px;
             border-radius: 3px;
-            background: whitesmoke;
-            border: 1px solid rgb(46, 64, 78);
+            background: $white;
+            border: 1px solid $secondaryColor;
         }
     }
+}
 
 .bg_active{
     visibility: visible;

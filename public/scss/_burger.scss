@@ -2,10 +2,10 @@
     display: none;
     cursor: pointer;
 
-    .burger div{
+    div{
         width: 30px;
         height: 5px;
-        background-color: rgba(253, 253, 13, 0.815);
+        background-color: $primaryColor;
         margin: 5%;
         border-radius: 2px;
         transition: all 0.5s ease;

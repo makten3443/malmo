@@ -1,12 +1,31 @@
 $primaryColor: rgba(253, 253, 13, 0.815);
 $secondaryColor: rgb(46, 64, 78);
+$darkSecColor: rgb(36, 47, 54);
+$buttonColor: rgb(221, 221, 74);
+$hoverBtn: rgba(156, 133, 133, 0.575);
 $blur:rgba(0, 0, 0, 0.3);
+$black: black;
+$grey: grey;
+$white: whitesmoke;
 
-$font-size: (
-    "logo": 30px,
-    "navbar": 20px,
-    "välkommen": 38px,
-    "h1": 20px,
-    "h2": 15px,
-    "p": 12px
-);
+$facebook:#3b5999;
+$twitter: #55acee;
+$instagram: rgb(243, 55, 55);
+$googleplus: #e6683c;
+
+// navbar texten
+@mixin navText {
+    color: $primaryColor;
+    text-decoration:none;
+    font-size: 20px;
+    padding: 6px;
+}
+
+// texten för loga
+@mixin loga {
+    color: $primaryColor;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+}

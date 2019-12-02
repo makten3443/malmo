@@ -1,8 +1,12 @@
 @import "./variabels";
 @import "./navbar";
+@import "./burger";
 @import "./modal";
 @import "./front";
-@import "./burger";
+@import "./cards";
+@import "./about";
+@import "./footer";
+
 
 *{
     margin: 0;
@@ -15,7 +19,7 @@ nav {
     justify-content: space-around;
     /* flex-direction: row; */
     align-items: center;
-    background: rgb(46, 64, 78);
+    background: $secondaryColor;
     padding: 10px;
     min-height: 9vh;
 }
@@ -40,8 +44,8 @@ nav {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(46, 64, 78);
-            border: 1px solid rgb(36, 47, 54);
+            background-color: $secondaryColor;
+            border: 1px solid $darkSecColor;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
             z-index: 1;
@@ -110,13 +114,13 @@ nav {
                 top: 3rem;
                 width: 90%;
                 z-index: 2;
-                color: grey;
+                color: $grey;
                 border: 0.5px solid;
             }
     
             .modal___kop{
                 position: relative;
-                left: 36%;
+                right: 1rem;
                 top: 85%;    
             }
         }

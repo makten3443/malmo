@@ -1,20 +1,25 @@
-.front___valkommen{
+
+.front{
+    display: flex;
+
+    .front___valkommen{
     position: absolute;
     left: 14%;
     top: 20%;
     font-size: 38px;
     text-decoration: line-through;
-    text-decoration-color: rgba(253, 253, 13, 0.815);
+    text-decoration-color: $primaryColor;
     /* display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-content: flex-end; */
 }
 
-.front___img {
+    .front___img {
     height: 90vh;
     width: 100%;
     object-fit: cover;
     width: 100%;
     height: 600px;
+}
 }

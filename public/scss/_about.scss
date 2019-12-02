@@ -1,0 +1,71 @@
+.about-us {
+    font-size: 3rem;
+    color: $primaryColor;
+    padding: 0px 0px 15px 0px;
+  }
+  
+  .about-us-text {
+    color: $white;
+    width: 50%;
+    padding: 25px 0px 26px 0px;
+  }
+  
+  .column {
+    display: flex;
+    width: 62%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0 4px 8px 0 $black;
+    background-color: $white;
+    border-radius: 1.1rem;
+    width: 220px;
+  }
+  
+  .img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .card-name {
+    padding: 20px 0;
+  }
+  
+  .card-title {
+    padding: 10px 0;
+    color: $grey;
+  }
+  
+  .button {
+    margin: 25px 0px;
+    border: none;
+    padding: 8px;
+    color: $white;
+    background-color: $secondaryColor;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+  }
+    
+  .button:hover {
+    background-color: $grey;
+  }
+  .aboutUsWrapper{
+    background-color: $secondaryColor;
+    display: flex;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 50%;
+      display: block;
+    }
+  }

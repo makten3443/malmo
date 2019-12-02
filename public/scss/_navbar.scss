@@ -7,41 +7,33 @@
     position: relative;
     right: -100px;
     padding: 8px;
-}
+
+    li{
+        list-style: none;
+      
+            &:hover{
+                text-decoration: line-through;
+                text-decoration-color:$primaryColor;
+            }
+
+        a{
+            @include navText();
+        }
     
-.nav-link li{
-    list-style: none;
-}  
-        .nav-link li :hover{
-            text-decoration: line-through;
-            text-decoration-color: rgba(253, 253, 13, 0.815);
+        button{
+            position: relative;
+            top: -3px;
+            background-color:$buttonColor;
+            border-radius: 2px;
+            border: 1px solid;
+            padding: 8px;
+            cursor: pointer;
         }
-
-        
-    .nav-link a{
-        color: rgba(253, 253, 13, 0.815);
-        text-decoration:none;
-        font-size: 20px;
-        padding: 6px;
-        }
-
-#nav-kund{
-    position: relative;
-    top: -3px;
-    background-color: rgb(102, 100, 86);
-    border-radius: 2px;
-    border: 1px solid;
-    padding: 8px;
-    cursor: pointer;
+    }
 }
-
 
 .logo {
-    color: rgba(253, 253, 13, 0.815);
-    text-decoration: line-through;
-    text-transform: uppercase;
-    font-size: 30px;
-    letter-spacing: 4px;
+    @include loga();
 
     /* jello animation */
     animation: jello-horizontal 0.8s both;

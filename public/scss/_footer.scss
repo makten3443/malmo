@@ -1,0 +1,32 @@
+.footer-wrapper{
+    background:$secondaryColor;
+    color: $white;
+    height: auto;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footercontent{
+    height: auto;
+    width: 500px;
+    display: flex;
+    justify-items: center;
+}
+.fa-facebook-square{
+    color:$facebook;
+}
+.fa-twitter-square{
+    color: $twitter;
+}
+.fa-instagram{
+    color: $instagram;
+}
+.fa-google-plus-square{
+    color: $googleplus;
+}
+.footersoci{
+    padding: 0px 30px;
+}
