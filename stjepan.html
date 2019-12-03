@@ -14,11 +14,31 @@
             <h1>Aeki</h1>
         </div>
     <ul class="nav-link">
-        <li><a href="#">Hem</a></li>
-        <li><a href="#">Produkter</a></li>
+        <li><a href="stjepan.html">Hem</a></li>
+        <li><a href="navbar.html">Produkter</a></li>
         <li><a href="#">Butiker</a></li>
-        <li><a href="#" id="nav-kund">Kundvagn</a></li>
+        <li><button class="kund" id="nav-kund">Kundvagn</button></li>
+
+        <!-- <li><a href="#" class="kundvagn" id="nav-kund">Kundvagn</a></li> -->
     </ul>
+
+    <!-- <button class="kund">Test</button> -->
+    
+    <div class="modal_bg">
+        <div class="modal">
+            <span class="modal___exit">X</span>
+                <div class="modal___text">
+                    <h3 class="modal___rubrik">Vara</h3>
+                    <h3 class="modal___antal">Antal</h3>
+                    <h3 class="modal___pris">Pris</h3>
+                </div>
+            <div class="modal___split">
+            </div>
+            <ul class="cartList" id="theCart">
+            </ul>
+            <button class="modal___kop">Köp</button>
+        </div>
+    </div>
     
     <!-- burgar menu -->
 <div class="burger">
@@ -32,57 +52,94 @@
     <div class="front___valkommen">
         <h1 class="rubrik"></h1>
         <h3 class="text">Mer än bara möbler!</h3>
-        </div>
+    </div>
         <img src="Bilder/green-wooden-chair-on-white-surface-963486.jpg" alt="bild på en stol" class="front___img">    
 </section>
 
 
+
+
     <main class="cardWraper">
             <h2 class="cardTitelpro">Produkter</h2>
-        <div class="container">
-        <div class="cardCon" data-price="5000">
+        <div class="containerPro">
+        <div class="cardCon" data-price="5000" data-name="stol" data-quantity="1"  data-item="stol_1">
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
             <p class="cardText" >Price:5000 </p>
             <button class="cardBtn"><b>Buy</b></button>
         </div>
-        <div class="cardCon" data-price="5550">
+        <div class="cardCon" data-price="5550" data-name="stol" data-quantity="1" data-item="stol_2" >
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
             <p class="cardText" >Price:5550 </p>
             <button class="cardBtn"><b>Buy</b></button>
         </div>
-        <div class="cardCon" data-price="3000">
+        <div class="cardCon" data-price="3000" data-name="stol" data-quantity="1" data-item="stol_3">
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
             <p class="cardText" >Price:3000 </p>
             <button class="cardBtn"><b>Buy</b></button>
         </div>
-        <div class="cardCon" data-price="3500">
+        <div class="cardCon" data-price="3500" data-name="bord1" data-quantity="1" data-item="bord_1">
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
             <p class="cardText" >Price:3500</p>
             <button class="cardBtn"><b>Buy</b></button>
         </div>
-        <div class="cardCon" data-price="1000">
+        <div class="cardCon" data-price="1000" data-name="bord2" data-quantity="1" data-item="bord_2">
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
             <p class="cardText" >Price:1000 </p>
             <button class="cardBtn"><b>Buy</b></butten>
         </div>
-        <div class="cardCon" data-price="10000">
+        <div class="cardCon" data-price="10000" data-name="bord3" data-quantity="1" data-item="bord_3">
             <h3 class="cardTitel" >stol</h3>
             <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
-            <p class="cardText" >Price:500</p>
+            <p class="cardText" >Price:10000</p>
             <button class="cardBtn"><b>Buy</b></button>
         </div>
     </div>
     </main>
-
+    <section class="aboutUsWrapper">
+    <div class="row">
+            <h2 class="about-us">About Us</h2>
+            <p class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, iusto. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+            
+            <div class="column">
+                <div class="card">
+                    <img class="img" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                        <div class="container">
+                        <h2 class="card-name">Name</h2>
+                        <p class="card-title">Job title</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="button">Contact</button>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <img class="img" src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                    <div class="container">
+                        <h2 class="card-name">Name</h2>
+                        <p class="card-title">Job title</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="button">Contact</button>
+                    </div>
+                </div>
+                    
+                <div class="card">
+                    <img class="img" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                    <div class="container">
+                        <h2 class="card-name">Name</h2>
+                        <p class="card-title">Job title</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="button">Contact</button>
+                    </div>
+                </div>
+            </div> <!-- end of column -->
+     </div> <!-- end of row -->
+    </section>
     <footer>
             <div id="About" class="footer-wrapper">
-                
-
                 <div class="phonemail">
                     <span><i class="fas fa-phone"></i> &nbsp;123-4567890</span>
                     <span><i class="fas fa-envelope"></i> &nbsp; Aeki@gmail.com </span>
@@ -95,13 +152,6 @@
                 <small>&copy; Copyright Malmö</small>
             </div>
     </footer>
-
-
-
-
-
-
-
     <script src="navbar.js"></script>
     <script src="https://kit.fontawesome.com/889bc53b2e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
