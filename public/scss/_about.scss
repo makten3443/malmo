@@ -1,16 +1,20 @@
 .row {
 background-color: $secondaryColor;
 
-.about-us {
-    font-size: 3rem;
-    color: $primaryColor;
-    padding: 0px 0px 15px 0px;
+.row-about-us{
+    display: flex;
+    justify-content: center;
+    .about-us {
+        font-size: 3rem;
+        color: $primaryColor;
+        padding: 0px 0px 15px 0px;
+    }
+      .about-us-text {
+        color: $white;
+        width: 50%;
+        padding: 25px 0px 26px 0px;
+      }   
 }
-  .about-us-text {
-    color: $white;
-    width: 50%;
-    padding: 25px 0px 26px 0px;
-  }
   
   .column {
     display: flex;
