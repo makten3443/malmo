@@ -1,0 +1,127 @@
+@media screen and (max-width:800px) {
+body{
+    height: 31.25rem;
+     width: 31.25rem;
+}
+}
+  
+.page-container {
+     max-width: 50rem;
+     margin: auto;
+     padding: 1.875rem;
+     border: 1px solid #eee;
+     box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+     }
+
+#header { 
+    height: 1.25rem; 
+    width: 100%; 
+    margin: 1.25rem 0; 
+     text-align: center; 
+     color:#222 ; 
+     font: bold 18px Helvetica, Sans-Serif; 
+     text-decoration: uppercase; 
+     letter-spacing: 18px; 
+    
+    border: 0px;
+     overflow: hidden; 
+     resize: none; }
+
+table { 
+     border-collapse: collapse;
+      width: 100%;
+     border-spacing: 0; }
+
+table td, table th { 
+   
+    padding: 5px; }
+
+#address {
+     padding-top:50px;
+     width: 250px; 
+   
+     float: left; }
+
+#customer {
+
+   margin: 66px 34px 0px 0px;
+ }
+
+.logoH {
+     margin-top:1rem;
+     margin-right:3rem;
+     text-decoration: line-through;
+     font-size: 1.5rem;
+     overflow: hidden; }
+
+.meta {
+      margin: 1px 0 60px ; 
+     width: 300px; 
+     float: right;
+      }
+
+.meta td { 
+     text-align: left;  
+     background: white;
+}
+.meta-head { 
+     text-align: left;
+     font-weight: bold; 
+     background: #eee; }
+
+
+#items { 
+ 
+     display:block; 
+     clear: both;
+
+     margin: 3.5rem 0 0 0px;
+     border: 1px solid white; 
+     overflow-x:auto;
+     border-spacing: 0px;
+}
+
+#items th,tr{
+   
+      padding: 1.25rem;
+      text-align: center;
+      border-bottom: 1px solid black;
+}
+  
+#items th {
+     background: #eee;
+}
+.desc {
+     text-align: left;
+}
+.item-name {
+      width: 100%; }
+      
+      table tbody tr:last-child td {
+          border: none;}
+
+     table tfoot td {
+          padding: 10px 1.25rem;
+          background: #FFFFFF;
+         border-bottom: 1px solid white;
+          font-size: 1.2em;
+          white-space: nowrap; 
+           }
+        
+.blank { 
+     border: 0; 
+     }
+        
+
+#footer { text-align: center; margin: 1.25rem 0 0 0; }
+
+#footer h5 { text-transform: uppercase; 
+    font: 13px Helvetica, Sans-Serif; 
+    letter-spacing: 10px; 
+    border-bottom: 1px solid black; 
+    padding: 0 0 8px 0; 
+    margin: 0 0 8px 0;
+     text-decoration: line-through;
+ }
+    
+#footer p { width: 100%; text-align: center;}
