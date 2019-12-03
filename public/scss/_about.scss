@@ -73,21 +73,46 @@ background-color: $secondaryColor;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .card {
-        box-shadow: 0 4px 8px 0 $black;
-        background-color: $white;
-        border-radius: 1.1rem;
-        width: 500px;
-    }
     
-    .img {
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        width: 600px;
-        height: 500px;
-        object-fit: cover;
-    } 
+        .card {
+            box-shadow: 0 4px 8px 0 $black;
+            background-color: $white;
+            border-radius: 1.1rem;
+            width: 600px;
+        
+            .img {
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                width: 600px;
+                height: 500px;
+                object-fit: cover;
+                } 
+            
+            .container {
+                width: 100%;
+            }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .row{
+    .column{
+        
+    .card{
+        width: 100%;
+        margin: 10px;
+        
+            .img{
+                width: 100%;
+                object-fit: cover;
+            }
+            .container{
+                align-items: center;
+                justify-content: center;
+                }
+            }
+        }
     }
 }
