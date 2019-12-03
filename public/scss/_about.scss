@@ -1,9 +1,11 @@
+.row {
+background-color: $secondaryColor;
+
 .about-us {
     font-size: 3rem;
     color: $primaryColor;
     padding: 0px 0px 15px 0px;
-  }
-  
+}
   .about-us-text {
     color: $white;
     width: 50%;
@@ -15,57 +17,77 @@
     width: 62%;
     justify-content: center;
     margin: 0 auto;
-  }
 
+    
   .card {
     margin: 2rem 1rem 2rem 1rem;
     box-shadow: 0 4px 8px 0 $black;
     background-color: $white;
     border-radius: 1.1rem;
     width: 220px;
-  }
   
-  .img {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    width: 100%;
-  }
-  
-  .container {
-    padding: 0 16px;
-  }
-  
-  .card-name {
-    padding: 20px 0;
-  }
-  
-  .card-title {
-    padding: 10px 0;
-    color: $grey;
-  }
-  
-  .button {
-    margin: 25px 0px;
-    border: none;
-    padding: 8px;
-    color: $white;
-    background-color: $secondaryColor;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 1rem;
-  }
-    
-  .button:hover {
-    background-color: $grey;
-  }
-  .aboutUsWrapper{
-    background-color: $secondaryColor;
-    display: flex;
-  }
+    .img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        } 
+        
+    .container {
+        padding: 0 16px;
 
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 50%;
-      display: block;
+        .card-name {
+            padding: 20px 0;
+          }
+          
+        .card-title {
+            padding: 10px 0;
+            color: $grey;
+          }
+
+          .button {
+            margin: 25px 0px;
+            border: none;
+            padding: 8px;
+            color: $white;
+            background-color: $secondaryColor;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 1rem;
+            
+                &:hover {
+                background-color: $grey;
+              }  
+        }
+        }
     }
-  }
+}
+}  
+
+
+  @media screen and (max-width: 1000px) {
+    
+    .row{
+        width: 100%;
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 $black;
+        background-color: $white;
+        border-radius: 1.1rem;
+        width: 500px;
+    }
+    
+    .img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+    } 
+}
+}
