@@ -138,3 +138,6 @@ window.onclick = function(event) {
   
   });
   
+  function skrivUt() {
+    window.print();
+  }

@@ -15,18 +15,19 @@
     display: flex;
     justify-items: center;
 }
-.fa-facebook-square{
-    color:$facebook;
-}
-.fa-twitter-square{
-    color: $twitter;
-}
-.fa-instagram{
-    color: $instagram;
-}
-.fa-google-plus-square{
-    color: $googleplus;
-}
 .footersoci{
     padding: 0px 30px;
+    
+    .fa-facebook-square{
+        color:$facebook;
+    }
+    .fa-twitter-square{
+        color: $twitter;
+    }
+    .fa-instagram{
+        color: $instagram;
+    }
+    .fa-google-plus-square{
+        color: $googleplus;
+    }
 }

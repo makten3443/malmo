@@ -86,43 +86,43 @@ nav {
             .toggle .line3 {
                 transform: rotate(45deg) translate(-5px,-4px);
             }
-        }
-        
-        .modal{
-            position: relative;
-            right: 0;
-            top: -1rem;
-            width: 100vw;
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        
-            .modal___text{
-                position: absolute;
-                top: 10px;
-                padding: 10px;
-                width: 80%;
+            
+            .modal_bg{
+            .modal{
+                position: relative;
+                right: 0;
+                top: -1rem;
+                width: 100vw;
+                height: 50vh;
                 display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-            }
-    
-            .modal___split {
-                position: relative;
-                left: 1%;
-                top: 3rem;
-                width: 90%;
-                z-index: 2;
-                color: $grey;
-                border: 0.5px solid;
-            }
-    
-            .modal___kop{
-                position: relative;
-                right: 1rem;
-                top: 85%;    
+                flex-direction: column;
+                align-items: center;
+            
+                .modal___text{
+                    position: absolute;
+                    top: 10px;
+                    padding: 10px;
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                }
+        
+                .modal___split {
+                    position: relative;
+                    left: 1%;
+                    top: 3rem;
+                    width: 90%;
+                    z-index: 2;
+                    color: $grey;
+                    border: 0.5px solid;
+                }
+        
+                .modal___kop{
+                    position: relative;
+                    right: 1rem;
+                    top: 85%;    
+                }
             }
         }
-    
-
+    }

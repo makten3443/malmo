@@ -3,7 +3,9 @@ background-color: $secondaryColor;
 
 .row-about-us{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
     .about-us {
         font-size: 3rem;
         color: $primaryColor;
