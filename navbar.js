@@ -28,9 +28,7 @@ const navSlide = () => {
         // burger menus toggle funktion
         burger.classList.toggle('toggle');
     });
-
 }
-
 navSlide();
 
   // gör en variabel för knappen "top".
