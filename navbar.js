@@ -31,6 +31,7 @@ const navSlide = () => {
 }
 navSlide();
 
+
   // gör en variabel för knappen "top".
 let buttonTop = document.getElementById("btnTop");
 
