@@ -69,75 +69,7 @@ window.onclick = function(event) {
         vagn.classList.remove("bg_active");
     }
   }
-///////
 
-  var knappar = document.getElementsByClassName('cardBtn');
-
-  console.log(knappar);
-  
-  for ( let i=0 ; i < knappar.length; i++ ) {
-  
-          knappar[i].addEventListener('click', function(){
-              let currentCard = knappar[i].parentNode.dataset;
-              skrivUt(currentCard);
-          });
-  };
-  
-  
-  var myLocalArray = window.localStorage.getItem('cart');
-  myLocalArray = JSON.parse(myLocalArray);
-  
-  let cartArr;
-  
-  if(myLocalArray){
-      cartArr = myLocalArray;
-  } else{
-      cartArr = [];
-    //   alert("Din kundkorg är tom! Köp nåt fo helvede");
-  }
-  
-  var theCart = document.getElementById('theCart');
-  
-  myLocalArray.forEach(vara => {
-    theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";  
-  
-  });
-  
-  function skrivUt(varan){
-  
-    theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";  
-      let myObj = {
-          item: {
-          "itemId": varan.item,
-          "itemName": varan.name,
-          "price": varan.price * varan.quantity,
-          "quantity": varan.quantity
-          }
-      }
-  
-      /*
-      let ObjektNamn = {
-          Nyckel: {
-          "Nyckel": värde,
-          "Nyckel2": annatVärde,
-          "Nyckel3": {
-              "NyckelNyckel1": "Hej",
-          },
-          }
-      }
-  
-      Om man vill hitta "Hej" så skriver man
-      let HejVariabel = ObjektNamn.Nyckel.Nyckel3.NyckelNyckel1;
-      */
-  
-      cartArr.push(myObj);
-      var stringCart = JSON.stringify(cartArr); 
-  
-      window.localStorage.setItem('cart', stringCart);
-  }
-  
-
- //////// 
   // gör en variabel för knappen "top".
 let buttonTop = document.getElementById("btnTop");
 
@@ -162,7 +94,7 @@ function backTop() {
 }
 
   // function för faktura sidan som skriver ut allt som finns på sidan
-  function skrivaUt() {
+  function skrivaPDF() {
     window.print();
   }
 
