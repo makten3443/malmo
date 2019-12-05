@@ -53,7 +53,7 @@
             top: 250px;
             width: 60px;
             height: 30px;
-            border-radius: 3px;
+            @include borderR;
             background: $white;
             border: 1px solid $secondaryColor;
         }

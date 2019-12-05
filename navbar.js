@@ -28,6 +28,7 @@ const navSlide = () => {
         // burger menus toggle funktion
         burger.classList.toggle('toggle');
     });
+
 }
 
 navSlide();
@@ -68,7 +69,7 @@ window.onclick = function(event) {
         vagn.classList.remove("bg_active");
     }
   }
-
+///////
 
   var knappar = document.getElementsByClassName('cardBtn');
 
@@ -98,14 +99,13 @@ window.onclick = function(event) {
   var theCart = document.getElementById('theCart');
   
   myLocalArray.forEach(vara => {
-      theCart.innerHTML = theCart.innerHTML + "<li><p>"+vara.item.itemName+"</p><p>"+vara.item.quantity+"</p><p>"+vara.item.price+"</p></li>";
+    theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";  
   
   });
   
   function skrivUt(varan){
   
-      theCart.innerHTML = theCart.innerHTML + "<li><p>"+varan.name+"</p><p>"+varan.quantity+"</p><p>"+varan.price+"</p></li>";
-  
+    theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";  
       let myObj = {
           item: {
           "itemId": varan.item,
@@ -136,8 +136,34 @@ window.onclick = function(event) {
       window.localStorage.setItem('cart', stringCart);
   }
   
-  });
-  
-  function skrivUt() {
+
+ //////// 
+  // gör en variabel för knappen "top".
+let buttonTop = document.getElementById("btnTop");
+
+// gör en function som agerar när det scrollas på sidan.
+window.onscroll = function () {
+    scrollTop();
+}
+// denna function gör så att när man scrollar ned till 40
+// så kommer den att vissas men innan dess kommer den att inte vissas.
+function scrollTop() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        buttonTop.style.display = "block";
+    } else{
+        buttonTop.style.display = "none";
+    }
+}
+
+// när man sedan trycker på knappen kommer den att åka upp till 0 (högst upp på sidan)
+function backTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+  // function för faktura sidan som skriver ut allt som finns på sidan
+  function skrivaUt() {
     window.print();
   }
+
+});

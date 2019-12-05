@@ -24,7 +24,7 @@
             position: relative;
             top: -3px;
             background-color:$buttonColor;
-            border-radius: 2px;
+            @include borderR;
             border: 1px solid;
             padding: 8px;
             cursor: pointer;

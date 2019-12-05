@@ -15,9 +15,9 @@
             <h1>Aeki</h1>
         </div>
     <ul class="nav-link">
-        <li><a href="#">Hem</a></li>
-        <li><a href="#">Produkter</a></li>
-        <li><a href="#">Butiker</a></li>
+        <li><a href="#card">Produkter</a></li>
+        <li><a href="#omOss">Om oss</a></li>
+        <li><a href="#About">Kontakt</a></li>
         <li><button class="kund" id="nav-kund">Kundvagn</button></li>
         <!-- <li><a href="#" class="kundvagn" id="nav-kund">Kundvagn</a></li> -->
     </ul>
@@ -51,12 +51,15 @@
         <h3 class="text">Mer än bara möbler!</h3>
     </div>
         <img src="Bilder/green-wooden-chair-on-white-surface-963486.jpg" alt="bild på en stol" class="front___img">    
-</section>
+        <button onclick="backTop()" id="btnTop">Top!</button>
+    </section>
+
+
 
 <!-- cards/produkt -->
-<main class="cardWraper">
+<main id="card" class="cardWraper">
     <h2 class="cardTitelpro">Produkter</h2>
-<div class="container">
+<div class="containerPro">
     <div class="cardCon" data-price="5000" data-name="stol" data-quantity="1" data-item="stol_1">
         <h3 class="cardTitel" >stol</h3>
         <img class="cardImg" src="bilder/chairs-daylight-designer-empty-416320 (1).jpg" alt="">
@@ -97,7 +100,7 @@
 </main>
 
 <!-- om oss -->
-<div class="row">
+<div id="omOss" class="row">
     <div class="row-about-us">
         <h2 class="about-us">About Us</h2>
         <p class="about-us-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, iusto. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>        
@@ -110,7 +113,7 @@
                 <h2 class="card-name">Name</h2>
                 <p class="card-title">Job title</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <button class="button">Contact</button>
+                <button class="buttonn">Contact</button>
             </div>
         </div>
 
@@ -120,7 +123,7 @@
                 <h2 class="card-name">Name</h2>
                 <p class="card-title">Job title</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <button class="button">Contact</button>
+                <button class="buttonn">Contact</button>
             </div>
         </div>
             
@@ -130,7 +133,7 @@
                 <h2 class="card-name">Name</h2>
                 <p class="card-title">Job title</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                <button class="button">Contact</button>
+                <button class="buttonn">Contact</button>
             </div>
         </div>
     </div> <!-- end of column -->

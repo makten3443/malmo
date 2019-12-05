@@ -1,14 +1,14 @@
 .cardWraper{
     text-align: center;
     background: $secondaryColor;
-    padding: 50px 0px 45px 0px;
+    padding: 80px 0;
 
     .cardTitelpro{
         padding: 1.5rem 0;
         font-size: 3rem;
         color: $white;
         text-shadow: 0 0 5px $black;
-        
+    }
         .containerPro{
             flex-flow: row wrap;
             display: flex;
@@ -60,19 +60,20 @@
                 }
             }
         }
-    }
+    
 
   
   .cartList {
     list-style-type: none;
     margin: 0px 20px;
 
+    li {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
 }
-.cartList li {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
+
 .cartNamnPro{
   margin-right: 10px;
   max-width: 30px;

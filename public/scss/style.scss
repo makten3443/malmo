@@ -7,6 +7,9 @@
 @import "./about";
 @import "./footer";
 
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     margin: 0;
@@ -14,6 +17,7 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -24,7 +28,7 @@ nav {
     min-height: 9vh;
 }
     
-    @media screen and (max-width:900px){
+    @media screen and (max-width:950px){
             body{
             overflow-x: hidden;
         }

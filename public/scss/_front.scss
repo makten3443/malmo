@@ -22,4 +22,17 @@
     width: 100%;
     height: 600px;
 }
+#btnTop{
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 60px;
+    height: 40px;
+    z-index: 2;
+    border: 1px solid $secondaryColor;
+    background-color: $primaryColor;
+    @include borderR;
+    cursor: pointer;
+}
 }
