@@ -87,15 +87,15 @@ function scrollTop() {
     }
 }
 
-// när man sedan trycker på knappen kommer den att åka upp till 0 (högst upp på sidan)
-function backTop() {
+document.getElementById("btnTop").addEventListener("click", function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
+})
+// när man sedan trycker på knappen kommer den att åka upp till 0 (högst upp på sidan)
 
   // function för faktura sidan som skriver ut allt som finns på sidan
-  function skrivaPDF() {
-    window.print();
-  }
+  document.getElementById("skrivaPDF").addEventListener("click", function () {
+      window.print();
+  })
 
 });
