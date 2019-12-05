@@ -55,14 +55,6 @@ document.getElementById("btnTop").addEventListener("click", function() {
 });
 
 
-// tar bort knapp när man trycker på knappen.
-document.querySelector("#skrivaPDF").addEventListener("click", function () {
-    document.getElementById("skrivaaPDF").style.display = none;
-    document.getElementById("back").style.display = none;
-    window.print();
-});
-
-
 // /// kommer att kalla på allt inuti funktionen "navSlide"
 // navSlide();
 
