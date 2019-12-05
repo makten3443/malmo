@@ -1,13 +1,13 @@
 .cardWraper{
     text-align: center;
-    background: $secondaryColor;
-    padding: 80px 0;
+            background: $secondaryColor;
+            padding: 70px 0px 45px 0px;
 
     .cardTitelpro{
         padding: 1.5rem 0;
-        font-size: 3rem;
-        color: $white;
-        text-shadow: 0 0 5px $black;
+              font-size: 3rem;
+              color: $white;
+              text-shadow: 0 0 5px $black;
     }
         .containerPro{
             flex-flow: row wrap;
@@ -60,7 +60,6 @@
                 }
             }
         }
-    
 
   
   .cartList {
@@ -121,11 +120,4 @@
 .cartpriss{
   max-width: 30px;
 }
-.row {
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 25px 0px 25px 0px;
-  }
 }
