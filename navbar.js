@@ -11,7 +11,7 @@ const navSlide = () => {
     const navLink = document.querySelectorAll('.nav-link li');
 
     // när man trycker på burgar menyn kommer "nav active" funktionen att aktiveras 
-    burger.addEventListener('click', ()=> {
+    burger.addEventListener('click', function() {
         nav.classList.toggle('nav-active');
     
         /////Animation för link//////
@@ -32,6 +32,29 @@ const navSlide = () => {
 }
 
 navSlide();
+
+  // gör en variabel för knappen "top".
+let buttonTop = document.getElementById("btnTop");
+
+// gör en function som agerar när det scrollas på sidan.
+window.onscroll = function () {
+    scrollTop();
+}
+// denna function gör så att när man scrollar ned till 40
+// så kommer den att vissas men innan dess kommer den att inte vissas.
+function scrollTop() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        buttonTop.style.display = "block";
+    } else{
+        buttonTop.style.display = "none";
+    }
+}
+
+// när man sedan trycker på knappen kommer den att åka upp till 0 (högst upp på sidan)
+document.getElementById("btnTop").addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 // /// kommer att kalla på allt inuti funktionen "navSlide"
 // navSlide();
@@ -70,32 +93,12 @@ window.onclick = function(event) {
     }
   }
 
-  // gör en variabel för knappen "top".
-let buttonTop = document.getElementById("btnTop");
-
-// gör en function som agerar när det scrollas på sidan.
-window.onscroll = function () {
-    scrollTop();
-}
-// denna function gör så att när man scrollar ned till 40
-// så kommer den att vissas men innan dess kommer den att inte vissas.
-function scrollTop() {
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        buttonTop.style.display = "block";
-    } else{
-        buttonTop.style.display = "none";
-    }
-}
-
-// när man sedan trycker på knappen kommer den att åka upp till 0 (högst upp på sidan)
-document.getElementById("btnTop").addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
 
   // function för faktura sidan som skriver ut allt som finns på sidan
-  document.getElementById("skrivaPDF").addEventListener("click", function () {
-      window.print();
-  })
+   /* document.querySelector("#skrivaPDF").addEventListener("click", function () {
+    window.print()
+    console.log("hej hej")
+   }
+     ) */
 
 });
