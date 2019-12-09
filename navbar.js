@@ -55,7 +55,6 @@ document.getElementById("btnTop").addEventListener("click", function() {
     document.documentElement.scrollTop = 0;
 });
 
-
 // // /// kommer att kalla på allt inuti funktionen "navSlide"
 // // navSlide();
 
@@ -163,7 +162,6 @@ document.getElementById("btnTop").addEventListener("click", function() {
         vagn.classList.remove("bg_active");
     });
     
-    
     window.onclick = function(event) {
         if (event.target == vagn) {
             vagn.classList.remove("bg_active");
@@ -181,7 +179,6 @@ for ( let i=0 ; i < knappar.length; i++ ) {
         });
 };
 
-
 var theCart = document.getElementById('theCart');
 var myLocalArray;
 let cartArr;
@@ -192,8 +189,7 @@ if( window.localStorage.getItem('cart') ) {
     myLocalArray = JSON.parse(localCart);
 
     myLocalArray.forEach(vara => {
-        theCart.innerHTML = theCart.innerHTML + "<li id='"+vara.item.itemId+"-item'><div class='cartNamnPro'>"+vara.item.itemName+"</div><div class='cartInner'><button class='decrease'>-</button><input data-itemid='" + vara.item.itemId + "' id='"+vara.item.itemId+"-quantity' type='text' min='1' class='nummer' value='"+vara.item.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+vara.item.itemId+"-price'>"+vara.item.price+"</div></li>";
-    
+        theCart.innerHTML = theCart.innerHTML + "<li class='cartRow' id='"+vara.item.itemId+"-item'><div class='cartNamnPro'>"+vara.item.itemName+"</div><div class='cartInner'><button class='decrease'>-</button><input data-itemid='" + vara.item.itemId + "' id='"+vara.item.itemId+"-quantity' type='text' min='1' class='nummer' value='"+vara.item.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+vara.item.itemId+"-price'>"+vara.item.price+"</div></li>";
     });
     
     cartArr = myLocalArray;
@@ -215,7 +211,6 @@ var changeIndex;
     });
 
     if( alreadyInCartId ) {
-
         let newQuantity = parseInt(changeIndex.item.quantity) + 1;
 
         changeIndex.item.quantity = newQuantity.toString();
@@ -235,7 +230,6 @@ var changeIndex;
         priceElem.innerText = changeIndex.item.price;
         quantityElem.value = changeIndex.item.quantity;
 
-        
         // cartArr[ (enSiffra) ].item.price kommer vara exakt samma som changeIndex.item.price
 
         var stringCart = JSON.stringify(cartArr); 
@@ -243,7 +237,7 @@ var changeIndex;
         
     } else {
 
-    theCart.innerHTML = theCart.innerHTML + "<li id='"+ varan.item +"-item'><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input data-itemid='" + varan.item + "' id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
+    theCart.innerHTML = theCart.innerHTML + "<li class='cartRow' id='"+ varan.item +"-item'><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input data-itemid='" + varan.item + "' id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
 
     let myObj = {
         item: {

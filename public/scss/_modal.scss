@@ -28,7 +28,7 @@
             padding-left: 2px;
             padding-right: 2px;
             margin: 2px;
-            cursor: pointer;    
+            cursor: pointer;
         }
 
         .modal___text{
@@ -38,88 +38,85 @@
             font-size: 12px;
           }
 
-        .modal___split {
-            position: relative;
-            left: 5%;
-            width: 90%;
-            z-index: 2;
-            color: $grey;
-            border: 0.5px solid;
-          }
-          .modal___kop {
-            position: absolute;
-            right: 3rem;
-            top: 250px;
-            width: 60px;
-            height: 30px;
-            @include borderR;
-            background: $white;
-            border: 1px solid $secondaryColor;
-          }
-        }
-      }
-        .cartList {
-          list-style-type: none;
-          margin: 0px 20px;
-    
-            li {
+          .modal___split {
+              position: relative;
+              left: 5%;
+              width: 90%;
+              z-index: 2;
+              color: $grey;
+              border: 0.5px solid;
+            }
+            .modal___kop {
+              position: absolute;
+              right: 3rem;
+              top: 250px;
+              width: 60px;
+              height: 30px;
+              @include borderR;
+              background: $white;
+              border: 1px solid $secondaryColor;
+            }
+        
+            .cartList {
+              list-style-type: none;
+              margin: 0px 20px;
+            }
+            .cartRow {
               display: flex;
               justify-content: space-around;
               flex-direction: row;
               margin-top: 10px;
-              
-              .cartNamnPro{
-                margin-right: 10px;
-                max-width: 30px;
-                
-                .cartInner{
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: center;
-                  min-width: 40px;
-                
-                    .decrease{
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      background-color: $white;
-                      width: 20px;
-                      height: 25px;
-                      border: none;
-                      border-top-left-radius: 4px;
-                      border-bottom-left-radius: 4px;
-                      box-shadow: .5rem .3rem 2rem $black
-                  }
+            }
+            .cartNamnPro{
+              margin-right: 10px;
+              max-width: 30px;
+            }
+            .cartInner{
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              min-width: 40px;
+            }
+            .decrease{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: $whiteWhite;
+              width: 20px;
+              height: 25px;
+              border: none;
+              border-top-left-radius: 4px;
+              border-bottom-left-radius: 4px;
+            }
 
-                  .nummer{
-                    width: 40px;
-                    border: none;
-                    text-align: center;
-                    box-shadow: .5rem .3rem 2rem $black;
-                  }
-                  
-                  .increase{
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      background-color: $white;
-                      width: 20px;
-                      height: 25px;
-                      border: none;
-                      border-top-right-radius: 4px;
-                      border-bottom-right-radius: 4px;
-                      box-shadow: .5rem .3rem 2rem $black;
-                  }
-
-                  .cartpriss{
-                    max-width: 30px;
-                  }
-                }
-              }
+            .nummer{
+              width: 40px;
+              border: none;
+              text-align: center;
+            }      
+            
+            .increase{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: $whiteWhite;
+              width: 20px;
+              height: 25px;
+              border: none;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
             }
           }
-
-
+            
+          .cartpriss{
+            max-width: 30px;
+          }
+        }
+            
+          
+        
+        
+    
 .bg_active{
     visibility: visible;
     opacity: 1;
