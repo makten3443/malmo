@@ -12,7 +12,7 @@ sass.compiler = require('node-sass');
  
 var JS_PATH = "public/**/*.js"
  
-const CSS_PATH ="public/style/**/*.css"
+const CSS_PATH ="public/style/**/*.scss"
 //styles
  
  
@@ -25,8 +25,9 @@ gulp.task("styles", async function(){
    }))
    .pipe(sourcemaps.init())
    .pipe(autoprefix())
-    //  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    //.pipe(sass().on('error', sass.logError))
+    
+   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
    .pipe(concat("styles.css"))
    .pipe(cleanCSS({compatibility: 'ie8'}))
    .pipe(sourcemaps.write("./maps"))

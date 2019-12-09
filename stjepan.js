@@ -2,7 +2,6 @@
 ///// navSlide/navbar funktionen//////
 document.addEventListener("DOMContentLoaded", function(){
 
-
     const navSlide = () => {
         // gör en variabel för classen "burger".
         const burger = document.querySelector('.burger');
@@ -70,116 +69,115 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
 
-var knappar = document.getElementsByClassName('cardBtn');
+    var knappar = document.getElementsByClassName('cardBtn');
 
-for ( let i=0 ; i < knappar.length; i++ ) {
+    for ( let i=0 ; i < knappar.length; i++ ) {
 
         knappar[i].addEventListener('click', function(){
             let currentCard = knappar[i].parentNode.dataset;
             skrivUt(currentCard,);
         });
-};
+    };
 
 
-var theCart = document.getElementById('theCart');
-var myLocalArray;
-let cartArr;
+    var theCart = document.getElementById('theCart');
+    var myLocalArray;
+    let cartArr;
 
-
-if( window.localStorage.getItem('cart') ) {
-    var localCart = window.localStorage.getItem('cart');
-    myLocalArray = JSON.parse(localCart);
-
-    myLocalArray.forEach(vara => {
-        theCart.innerHTML = theCart.innerHTML + "<li id='"+vara.item.itemId+"'><div class='cartNamnPro'>"+vara.item.itemName+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+vara.item.itemId+"-quantity' type='text' min='1' class='nummer' value='"+vara.item.quantity+"'><button class='increase' onclick='additem()'>+</button></div><div class='cartpriss' id='"+vara.item.itemId+"-price'>"+vara.item.price+"</div></li>";
     
+    if( window.localStorage.getItem('cart') ) {
+        var localCart = window.localStorage.getItem('cart');
+        myLocalArray = JSON.parse(localCart);
+
+        myLocalArray.forEach(vara => {
+            theCart.innerHTML = theCart.innerHTML + "<li id='"+vara.item.itemId+"'><div class='cartNamnPro'>"+vara.item.itemName+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+vara.item.itemId+"-quantity' type='text' min='1' class='nummer' value='"+vara.item.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+vara.item.itemId+"-price'>"+vara.item.price+"</div></li>";
+        
     });
     
     cartArr = myLocalArray;
-} else {
-    cartArr = [];
-}
-
-
-
-
-function skrivUt(varan){
-
-var alreadyInCartId = false;
-var changeIndex;
-    cartArr.forEach( index => {
-        if( index.item.itemId == varan.item ) {
-            changeIndex = index;
-            alreadyInCartId = true;
-            return;
-        }
-    });
-
-    if( alreadyInCartId ) {
-
-        let newQuantity = parseInt(changeIndex.item.quantity) + 1;
-
-        changeIndex.item.quantity = newQuantity.toString();
-
-        let newPrice = varan.price * newQuantity;
-
-        changeIndex.item.price = newPrice;
-        // exakt samma som att skriva 
-        // cartArr[0].item.price = newPrice; eller
-        // cartArr[1].item.price = newPrice; eller
-        // cartArr[2].item.price = newPrice; osv beroende på vilken vara vi klickar 
-        // på och som finns i vår localStorage array
-
-        let priceElem = document.getElementById(changeIndex.item.itemId + '-price'); // stol_1-price
-        let quantityElem = document.getElementById(changeIndex.item.itemId + '-quantity');
-
-        priceElem.innerText = changeIndex.item.price;
-        quantityElem.value = changeIndex.item.quantity;
-
-        
-        // cartArr[ (enSiffra) ].item.price kommer vara exakt samma som changeIndex.item.price
-
-        var stringCart = JSON.stringify(cartArr); 
-        window.localStorage.setItem('cart', stringCart);
-
-
-        
     } else {
+        cartArr = [];
+    }
 
-    theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase' onclick='additem()'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
 
-    let myObj = {
-        item: {
-        "itemId": varan.item,
-        "itemName": varan.name,
-        "price": varan.price * varan.quantity,
-        "quantity": varan.quantity
+    
+
+    function skrivUt(varan){
+
+    var alreadyInCartId = false;
+    var changeIndex;
+        cartArr.forEach( index => {
+            if( index.item.itemId == varan.item ) {
+                changeIndex = index;
+                alreadyInCartId = true;
+                return;
+            }
+        });
+
+        if( alreadyInCartId ) {
+
+            let newQuantity = parseInt(changeIndex.item.quantity) + 1;
+
+            changeIndex.item.quantity = newQuantity.toString();
+
+            let newPrice = varan.price * newQuantity;
+
+            changeIndex.item.price = newPrice;
+            // exakt samma som att skriva 
+            // cartArr[0].item.price = newPrice; eller
+            // cartArr[1].item.price = newPrice; eller
+            // cartArr[2].item.price = newPrice; osv beroende på vilken vara vi klickar 
+            // på och som finns i vår localStorage array
+
+            let priceElem = document.getElementById(changeIndex.item.itemId + '-price'); // stol_1-price
+            let quantityElem = document.getElementById(changeIndex.item.itemId + '-quantity');
+
+            priceElem.innerText = changeIndex.item.price;
+            quantityElem.value = changeIndex.item.quantity;
+
+            
+            // cartArr[ (enSiffra) ].item.price kommer vara exakt samma som changeIndex.item.price
+
+            var stringCart = JSON.stringify(cartArr); 
+            window.localStorage.setItem('cart', stringCart);
+
+
+            
+        } else {
+
+        theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
+
+        let myObj = {
+            item: {
+            "itemId": varan.item,
+            "itemName": varan.name,
+            "price": varan.price * varan.quantity,
+            "quantity": varan.quantity
+            }
         }
-    }
 
-    /*
-    let ObjektNamn = {
-        Nyckel: {
-        "Nyckel": värde,
-        "Nyckel2": annatVärde,
-        "Nyckel3": {
-            "NyckelNyckel1": "Hej",
-        },
+        /*
+        let ObjektNamn = {
+            Nyckel: {
+            "Nyckel": värde,
+            "Nyckel2": annatVärde,
+            "Nyckel3": {
+                "NyckelNyckel1": "Hej",
+            },
+            }
         }
-    }
 
-    Om man vill hitta "Hej" så skriver man
-    let HejVariabel = ObjektNamn.Nyckel.Nyckel3.NyckelNyckel1;
-    */
+        Om man vill hitta "Hej" så skriver man
+        let HejVariabel = ObjektNamn.Nyckel.Nyckel3.NyckelNyckel1;
+        */
 
-    cartArr.push(myObj);
-    var stringCart = JSON.stringify(cartArr); 
+        cartArr.push(myObj);
+        var stringCart = JSON.stringify(cartArr); 
 
-    window.localStorage.setItem('cart', stringCart);
-    }
-    function additem() {
+        window.localStorage.setItem('cart', stringCart);
+        }
         
     }
-}
+
 });
  

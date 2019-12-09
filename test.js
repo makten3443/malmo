@@ -23,3 +23,12 @@ function time(){
     bokaTid.shift();
     console.log(bokaTid);
 } */
+
+/*     rakibs code 
+document.querySelector(".increase").addEventListener("click", function(){
+    var inputVal=  document.querySelector(varan.item+"-quantity").value;
+    inputVal++;
+     console.log(inputVal)
+    console.log(varan.price+varan.price)
+}) 
+ */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="faktura.css">
+</head>
+<body>
+    <button id="back" onclick="window.history.back()">Tillbaka</button>
+    <button id="skrivaPDF">Skriva ut!</button>
+
+ <main class="page-container">
+       <div class="logoH"> AEKI</div>
+            <h1 id="header">FAKTURA</h1>       
+              <div id="identity">
+            
+                <p id="address"> Mottsgare 
+                     address: Lorem ipsum dolor,
+                     fkslökölkaösfk
+                     ksläaäö
+                   XXXXX XX, 
+                    <br>  <br> 
+                  Phone: 
+                </p></div>
+        
+            
+            <div id="customer">
+                <table class="meta">
+                    <tr>
+                        <td class="meta-head">Faktura nummer #</td>
+                        <td><div id="Fnummer">12345</div></td> 
+                    </tr>
+                     <!-- //javascript -->
+                    <tr>
+                       <td class="meta-head">Datum</td>
+                       <td><div id="date">December 16, 2019</div></td>
+                    </tr>    <!-- //javascript -->
+
+                    <tr>
+                            <td class="meta-head">Förfallodatum</td>
+                            <td><div class="due">1234567-9</div></td>
+
+                    <!-- <tr>
+                        <td class="meta-head"></td>
+                        <td><div class="due">		&#107;&#114;</div></td>
+                    </tr> -->
+                    <tr>
+                            <td class="meta-head">Plusgioro</td>
+                            <td><div class="due">1234567-9</div></td>
+                        </tr>
+                        <tr>
+                                <td class="meta-head">Bankgiro</td>
+                                <td><div class="due">123-4567</div></td>
+                            </tr>
+
+             </table>
+           </div>
+            
+          
+           <table id="items">
+             <thead>
+              <tr>
+                  <th class="">produkt</th>
+                  <th class="">Antal</th> 
+                  <th class="">aPris</th>    
+                  <th class="">Pris</th>
+              </tr>
+            </thead>
+
+              <tbody id="fakturaPro"></tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="2">Summa</td>
+                  <td id="summa">200</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="2">MOMS 25%</td>
+                  <td id="moms">100.00</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="2">TOTAL</td>
+                  <td id="total">6,500</td>
+                </tr>
+              </tfoot>
+            </table>
+            
+            <div id="footer">
+              <h5>AEKI</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+      </main>
+
+      <script src="faktura.js"></script>
+      <script src="Fstjepan.js"></script>
+ </body>
+</html>
