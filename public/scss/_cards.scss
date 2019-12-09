@@ -12,6 +12,7 @@
         .containerPro{
             flex-flow: row wrap;
             display: flex;
+            flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
             padding: 25px 0px 0px 0px;
@@ -60,4 +61,11 @@
                 }
             }
         }
-}
+    }
+
+    @media screen and (max-width: 700px) {
+        .containerPro{
+            display: flex;
+            flex-direction: column;
+        }
+    }
