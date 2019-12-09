@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="faktura.css">
 </head>
 <body>
-    <button id="back" onclick="window.location.href = 'file:///D:/andre/newfiles/gruppinl-mining-master/navbar.html'">Tillbaka</button>
+    <button id="back" onclick="window.history.back()">Tillbaka</button>
     <button id="skrivaPDF">Skriva ut!</button>
 
  <main class="page-container">
@@ -42,10 +42,10 @@
                             <td class="meta-head">Förfallodatum</td>
                             <td><div class="due">1234567-9</div></td>
 
-                    <tr>
+                    <!-- <tr>
                         <td class="meta-head"></td>
                         <td><div class="due">		&#107;&#114;</div></td>
-                    </tr>
+                    </tr> -->
                     <tr>
                             <td class="meta-head">Plusgioro</td>
                             <td><div class="due">1234567-9</div></td>
@@ -63,47 +63,29 @@
              <thead>
               <tr>
                   <th class="">produkt</th>
-                  <th class="">Beskrivning</th>
                   <th class="">Antal</th> 
                   <th class="">aPris</th>    
                   <th class="">Pris</th>
               </tr>
             </thead>
 
-              <tbody>  
-              <tr>
-                  <td class="item-name">stol</td>
-                  <td class="desc">Lorem ipsum dolor sit amet, consectetur</td>
-                  <td class="qty">1</td> 
-                  <td class="cost">10 000</td>
-                  <td><span class="price">10 000</span></td>
-              </tr>
-              
-              <tr>
-                  <td class="item-name">Design stol</td>
-                  <td class="desc">Lorem ipsum dolor sit amet consectetur.</td>
-                 <td class="qty">3</td>
-                  <td class="cost">50 000</td> 
-                  <td><span class="price">150 000</span></td>
-              </tr>
-            </tbody>
-
+              <tbody id="fakturaPro"></tbody>
 
               <tfoot>
                 <tr>
                   <td colspan="2"></td>
-                  <td colspan="2">TOTAL</td>
-                  <td>200.00</td>
+                  <td colspan="2">Summa</td>
+                  <td id="summa">200</td>
                 </tr>
                 <tr>
                   <td colspan="2"></td>
                   <td colspan="2">MOMS 25%</td>
-                  <td>100.00</td>
+                  <td id="moms">100.00</td>
                 </tr>
                 <tr>
                   <td colspan="2"></td>
                   <td colspan="2">TOTAL</td>
-                  <td>6,500</td>
+                  <td id="total">6,500</td>
                 </tr>
               </tfoot>
             </table>
@@ -115,5 +97,6 @@
       </main>
 
       <script src="faktura.js"></script>
+      <script src="Fstjepan.js"></script>
  </body>
 </html>
