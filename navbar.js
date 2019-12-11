@@ -153,12 +153,11 @@ document.getElementById("btnTop").addEventListener("click", function() {
     
     vagnBtn.addEventListener("click", function(){
             // när man trycker på "kundvagn" kommer bg_active att vissas
-        vagn.classList.add("bg_active");
+            vagn.classList.add("bg_active");
     });
     
     exit.addEventListener("click", function(){
         // när man trycker på "exit" kommer bg_active att försvinna
-        
         vagn.classList.remove("bg_active");
     });
     
