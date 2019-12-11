@@ -10,5 +10,3 @@ document.querySelector("#skrivaPDF").addEventListener("click", function () {
 });
 
 
-
-

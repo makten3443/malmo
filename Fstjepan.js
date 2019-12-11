@@ -38,5 +38,12 @@ document.addEventListener("DOMContentLoaded", function(){
     momsElem.innerText = moms;
     totalElem.innerText = summa + moms;
 
-    
+   
 });
+
+datum = new Date().toLocaleDateString();
+document.getElementById("datum").textContent = datum;
+    console.log(datum);
+
+ document.getElementById("Fnummer").innerHTML =
+Math.floor(Math.random() * 1000000) + 100;

@@ -174,8 +174,10 @@ for ( let i=0 ; i < knappar.length; i++ ) {
         knappar[i].addEventListener('click', function(){
             let currentCard = knappar[i].parentNode.dataset;
             skrivUt(currentCard);
-            cartUppdate();
         });
+        knappar[i].addEventListener('click', function() {
+            cartUppdate()
+        },{once: true});
 };
 
 var theCart = document.getElementById('theCart');
@@ -288,7 +290,6 @@ var changeIndex;
 
 
     function updButtons( incBtn, decBtn ) {
-        console.log("tja");
         
         incBtn.forEach(elem => {
             elem.addEventListener('click', function() {
@@ -346,7 +347,7 @@ var changeIndex;
                     }
                 });
 
-                if(myInput.value <= 0 || myInput.value <= "0"){
+                if(myInput.value <= 1 || myInput.value <= "1"){
                     let myIndexString = String(changeIndex);
                     let theIndex = myLocalCart.indexOf(myIndexString);
                     console.log(theIndex);
@@ -386,5 +387,4 @@ var changeIndex;
             });
         });
     }
-
 });
