@@ -1,7 +1,7 @@
 .cardWraper{
     text-align: center;
-            background: $secondaryColor;
-            padding: 70px 0px 45px 0px;
+        background: $secondaryColor;
+        padding: 70px 0px 45px 0px;
 
     .cardTitelpro{
         padding: 1.5rem 0;
@@ -15,7 +15,7 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            padding: 25px 10px;
+            padding: 20px 2%;
           
             .cardCon{
                 width: 18rem;
@@ -65,9 +65,13 @@
 
 
 
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1300px) {
         .containerPro{
+            flex-flow: row wrap;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 25px 5%;
         }
     }
