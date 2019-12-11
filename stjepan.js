@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(){
             
         } else {
 
-        theCart.innerHTML = theCart.innerHTML + "<li><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
+        theCart.innerHTML = theCart.innerHTML + "<li id='"+vara.item.itemId+"><div class='cartNamnPro'>"+varan.name+"</div><div class='cartInner'><button class='decrease'>-</button><input id='"+varan.item+"-quantity' type='text' min='1' class='nummer' value='"+varan.quantity+"'><button class='increase'>+</button></div><div class='cartpriss' id='"+varan.item+"-price'>"+varan.price+"</div></li>";
 
         let myObj = {
             item: {
