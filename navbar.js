@@ -112,7 +112,7 @@ document.getElementById("btnTop").addEventListener("click", function() {
         // när man trycker på burgar menyn kommer "nav active" funktionen att aktiveras 
         burger.addEventListener('click', ()=> {
             nav.classList.toggle('nav-active');
-        
+
             /////Animation för link//////
             // link är vardera länkar i listan, index gör det möjligt att sätta en delay för vardera länk.
             // if = om animationen har spelats kommer den inte att animera.
@@ -158,6 +158,7 @@ document.getElementById("btnTop").addEventListener("click", function() {
     
     exit.addEventListener("click", function(){
         // när man trycker på "exit" kommer bg_active att försvinna
+        
         vagn.classList.remove("bg_active");
     });
     

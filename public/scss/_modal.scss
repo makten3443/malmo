@@ -1,7 +1,7 @@
 .modal_bg{
-	position: fixed;
+	position: absolute;
 	width: 100%;
-	height: 100vh;
+  height: 100%;
 	top: 72px;
     left: 0;
     background-color: $blur;
@@ -23,7 +23,7 @@
         border-radius: 2px;
 
         .modal___exit {
-            position: fixed;
+            position: absolute;
             right: 0;
             padding-left: 2px;
             padding-right: 2px;
