@@ -1,7 +1,6 @@
 // ///// navSlide/navbar funktionen//////
 document.addEventListener("DOMContentLoaded", function(){
 
-
 // const navSlide = () => {
 //     // gör en variabel för classen "burger".
 //     const burger = document.querySelector('.burger');
