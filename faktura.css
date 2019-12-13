@@ -39,7 +39,6 @@
     #address {
          padding-top:50px;
          width: 250px; 
-       
          float: left; }
     
     #customer {
@@ -111,3 +110,9 @@
     .blank { 
          border: 0; 
          }
+
+     @media screen and (min-width:800px) {
+          body{
+               zoom: 90%;
+          } 
+     }
