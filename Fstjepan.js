@@ -41,9 +41,31 @@ document.addEventListener("DOMContentLoaded", function(){
    
 });
 
-datum = new Date().toLocaleDateString();
-document.getElementById("datum").textContent = datum;
-    console.log(datum);
+// Salsas js börjar här.
 
  document.getElementById("Fnummer").innerHTML =
 Math.floor(Math.random() * 1000000) + 100;
+
+date = new Date().toLocaleDateString();
+
+document. getElementById("date").textContent= date
+ console.log(date);
+
+
+  function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
+ Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+var date = new Date();
+document.getElementById("ddate").textContent =
+date.addDays(30).toLocaleDateString();
+console.log(ddate.textContent)
+
+// salsas js slutar här.

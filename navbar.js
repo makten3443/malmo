@@ -1,4 +1,7 @@
 // ///// navSlide/navbar funktionen//////
+
+// Andreas har gjort detta
+
 document.addEventListener("DOMContentLoaded", function(){
 
 // const navSlide = () => {
@@ -167,6 +170,11 @@ document.getElementById("btnTop").addEventListener("click", function() {
         }
       }
 
+      // Andreas js slutar här 
+
+      
+      // Stepjans js börjar här 
+
 var knappar = document.getElementsByClassName('cardBtn');
 
 for ( let i=0 ; i < knappar.length; i++ ) {
@@ -179,6 +187,7 @@ for ( let i=0 ; i < knappar.length; i++ ) {
             cartUppdate()
         },{once: true});
 };
+
 
 var theCart = document.getElementById('theCart');
 var myLocalArray;
@@ -388,3 +397,5 @@ var changeIndex;
         });
     }
 });
+
+// stjepans js slutar här.
